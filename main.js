@@ -1,4 +1,4 @@
 function myFunction() {
-    document.getElementById().click();
+    document.getElementById("test").click();
 }
 
