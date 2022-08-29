@@ -6,16 +6,28 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    
 </head>
 <body>
-    <h1>
-        nqson
-    </h1>
-    <div>
-        <input type="checkbox" id="test" onmousedown="myFunction()">
-            try to check this checkbox
-        </input>
-    </div>
+    <script>
+        const para = document.createElement("h1");
+        para.innerText = "nqson";
+        document.body.appendChild(para);
+        for(i=0;i<10;i++){
+            for(j=0;j<10;j++){
+                const inp = document.createElement("input");
+                inp.type = "checkbox";
+                inp.onmouseover = function(){
+                    myFunction(this);
+                };
+                document.body.appendChild(inp);
+                function myFunction(element) {
+                    element.click();
+                }
+            }
+            document.body.appendChild(document.createElement("br"));
+        }
+    </script>
+    
 </body>
 </html>
