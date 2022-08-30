@@ -12,34 +12,49 @@
 
 <body>
     <script>
-        const para = document.createElement("p");
-        para.innerText = "nqson";
-        para.id = "abc";
-        para.style.background = "#00FF00";
+
+        //tag p html
+        const para = document.createElement("a");
+        para.innerText = "nqson game";
+        const para_css = para.style;
+        para_css.font = "30px patrick hand";
+        para_css.background = "#00FF00";
+        para_css.textAlign = "center";
+        // para_css.
         document.body.appendChild(para);
-        for (i = 0; i < 50; i++) {
-            for (j = 0; j < 50; j++) {
+        endl();
+        //tag button html
+        const game = [];
+        const n = 6;
+        for (i = 0; i < n; i++) {
+            game.push([]);
+            for (j = 0; j < n; j++) {
                 const inp = document.createElement("input");
                 inp.type = "checkbox";
-                inp.onmouseover = function () {
+                inp.onmousedown = function () {
                     myFunction(this);
                 };
+                inp.setAttribute("x",i);
+                inp.setAttribute("y",j);
                 document.body.appendChild(inp);
-    
-                function myFunction(element) {
-                    element.click();
-                }
+                game[i].push(inp);
             }
+            endl();
+        }
+        function myFunction(e) {
+            e.click();
+            let x = parseInt(e.getAttribute("x"));
+            let y = parseInt(e.getAttribute("y"));
+            console.log(x+" "+y);
+            if(x>0) game[x-1][y].click();
+            if(y>0) game[x][y-1].click();
+            if(x<n-1) game[1+x][y].click();
+            if(y<n-1) game[x][1+y].click();
+        }
+        function endl(){
             document.body.appendChild(document.createElement("br"));
         }
-    </script>
-    <script>
-        const arr = document.getElementsByTagName("p");
-        
-        for (const e of arr) {
-            e.style.fontFamily = "Patrick Hand";
-            e.style.fontSize = "30px"
-        }
+        document.body.style.textAlign = "center";
     </script>
 </body>
 
