@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Nqson</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://fonts.googleapis.com/css?family=Patrick Hand'>
 </head>
+
 <body>
     <script>
-        const para = document.createElement("h1");
+        const para = document.createElement("p");
         para.innerText = "nqson";
+        para.id = "abc";
+        para.style.background = "#00FF00";
         document.body.appendChild(para);
-        for(i=0;i<50;i++){
-            for(j=0;j<50;j++){
+        for (i = 0; i < 50; i++) {
+            for (j = 0; j < 50; j++) {
                 const inp = document.createElement("input");
                 inp.type = "checkbox";
-                inp.onmouseover = function(){
+                inp.onmouseover = function () {
                     myFunction(this);
                 };
                 document.body.appendChild(inp);
+    
                 function myFunction(element) {
                     element.click();
                 }
@@ -27,6 +33,14 @@
             document.body.appendChild(document.createElement("br"));
         }
     </script>
-
+    <script>
+        const arr = document.getElementsByTagName("p");
+        
+        for (const e of arr) {
+            e.style.fontFamily = "Patrick Hand";
+            e.style.fontSize = "30px"
+        }
+    </script>
 </body>
+
 </html>
