@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -12,16 +11,21 @@
 
 <body>
     <script>
-
         //tag p html
-        const para = document.createElement("a");
-        para.innerText = "nqson game";
-        const para_css = para.style;
-        para_css.font = "30px patrick hand";
-        para_css.background = "#00FF00";
-        para_css.textAlign = "center";
-        // para_css.
-        document.body.appendChild(para);
+        const line1 = document.createElement("a");
+        line1.innerText = "nqson game";
+        const line1_css = line1.style;
+        line1_css.fontSize = "30px";
+        line1_css.background = "#00FF00";
+        line1_css.textAlign = "left"
+        document.body.appendChild(line1);
+        endl();
+        //tag p html
+        const line2 = document.createElement("a");
+        line2.innerText = "chuyển tất cả thành tích xanh để chiến thắng";
+        const line2_css = line2.style;
+        line2_css.fontSize = "22px";
+        document.body.appendChild(line2);
         endl();
         //tag button html
         const game = [];
@@ -31,7 +35,7 @@
             for (j = 0; j < n; j++) {
                 const inp = document.createElement("input");
                 inp.type = "checkbox";
-                inp.onmousedown = function () {
+                inp.onmouseup = function () {
                     myFunction(this);
                 };
                 inp.setAttribute("x",i);
@@ -41,20 +45,51 @@
             }
             endl();
         }
+        game.forEach(arr => {
+            arr.forEach(e => {
+                if(Math.random().toFixed()==1) {
+                    myFunction(e);
+                    e.click();
+                }
+            });
+        });
         function myFunction(e) {
             e.click();
             let x = parseInt(e.getAttribute("x"));
             let y = parseInt(e.getAttribute("y"));
-            console.log(x+" "+y);
+            
             if(x>0) game[x-1][y].click();
             if(y>0) game[x][y-1].click();
             if(x<n-1) game[1+x][y].click();
             if(y<n-1) game[x][1+y].click();
+            let count = 0;
+            game.forEach(arr => {
+                arr.forEach(e1 => {
+                    if(e1.checked) count++;
+                });
+            });
+            if(e.checked) count--;
+            else count++;
+            if(count==n*n){
+                const win = document.createElement("a");
+                win.innerText = "WIN!";
+                win.id = "win";
+                const win_css = win.style;
+                win_css.color = "blue";
+                win_css.fontSize = "22px";
+                document.body.appendChild(win);
+            }else{
+                const temp = document.getElementById("win");
+                if(temp!=null) document.body.removeChild(temp);
+            }
         }
         function endl(){
             document.body.appendChild(document.createElement("br"));
         }
-        document.body.style.textAlign = "center";
+        const body_css = document.body.style;
+        body_css.textAlign = "center";
+        body_css.fontFamily = "patrick hand";
+        body_css.background = "#FFF"
     </script>
 </body>
 
