@@ -12,15 +12,16 @@
 <body>
     <div class="container" style="font-family: Patrick Hand; width: 1000px; background-color: gainsboro; margin: auto;">
         <div class="header" style="text-align: center;">
-            <img src="../sad.png" alt="happy">
-            <h1>Happy Mood</h1>
+            <img src="../sad.png" alt="sad">
+            <h1>Sad Mood</h1>
             <hr>
         </div>
         <div class="content">
             <div>
                 <h1>Current coures</h1>
                 <ul>
-                    <li>CSE 451 - HTML (<a href="https://www.w3schools.com/html/default.asp" target="_blank">link</a>)</li>
+                    <li>CSE 451 - HTML (<a href="https://www.w3schools.com/html/default.asp" target="_blank">link</a>)
+                    </li>
                     <li>CSE 543 - Math</li>
                     <li>CSE 122 - React</li>
                 </ul>
@@ -32,6 +33,119 @@
                     <li>Music</li>
                     <li>Movies</li>
                 </ul>
+            </div>
+            <div>
+                <table border="1" cellspacing="0">
+                    <tr>
+                        <th>Course number</th>
+                        <th>Course title</th>
+                        <th>Semester taken</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">For credit</th>
+                    </tr>
+                    <tr>
+                        <th>6.1223</th>
+                        <th>Operating system</th>
+                        <th>spring 19</th>
+                    </tr>
+                    <tr>
+                        <th>5.9480</th>
+                        <th>Artifical intelligence</th>
+                        <th>fall 19</th>
+                    </tr>
+                    <tr>
+                        <th>7.0879</th>
+                        <th>Data mining</th>
+                        <th>fall 19</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">For listener</th>
+                    </tr>
+                    <tr>
+                        <th>8.0383</th>
+                        <th>Database</th>
+                        <th>fall 19</th>
+                    </tr>
+                    <tr>
+                        <th>6.0393</th>
+                        <th>Java programing</th>
+                        <th>spring 19</th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h1>Submit information</h1>
+                <form action="">
+                    <table>
+                        <tr>
+                            <td><label for="txtFullname">Full Name: </label></td>
+                            <td><input type="text" name="fn" id="txtFullname"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender: </td>
+                            <td>
+                                <label for="rdom">Male</label>
+                                <input type="radio" name="gen" id="rdom" value="1">
+                                <label for="rdofm">Female</label>
+                                <input type="radio" name="gen" id="rdofm" value="2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hobies: </td>
+                            <td>
+                                <label for="chkmusic">Music</label>
+                                <input type="checkbox" name="music" id="chkmusic">
+                                <br>
+                                <label for="chkgame">Games</label>
+                                <input type="checkbox" name="games" id="chkgame">
+                                <br>
+                                <label for="chkmovies">Movies</label>
+                                <input type="checkbox" name="movies" id="chkmovies">
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="txtbob">Date of birth:</label></td>
+                            <td><input type="date" name="bod" id="txtbod"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="cbocountry">Country:</label></td>
+                            <td>
+                                <select name="country" id="cbocountry">
+                                    <option value="1">Hanoi</option>
+                                    <option value="2">Tokyo</option>
+                                    <option value="3">Paris</option>
+                                    <option value="4">Lodon</option>
+                                    <option value="5">Moscow</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="txtf">Picture:</label></td>
+                            <td><input type="file" name="pic" id="txtf"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="txtmail">Email: </label></td>
+                            <td><input type="email" name="email" id="txtmail"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="txtpass">Password: </label></td>
+                            <td><input type="password" name="pass" id="txtpass"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="txtfw">Farorite words</label></td>
+                            <td><textarea name="fw" id="txtfw" cols="30" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="submit">
+                                <input type="reset" value="reset">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
             </div>
             <div><a href="../lab1.html">Back</a></div>
         </div>
