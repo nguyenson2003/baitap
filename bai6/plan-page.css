@@ -1,0 +1,49 @@
+body{
+    background: url(images/plan-page.jpg);
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+section{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+section>article{
+    width: 20%;
+    display: inline-block;
+    margin: 0px 20px;
+    background-color: #262626;
+    border: rgb(70, 70, 70) solid 3px;
+    font-family: Lato, sans-serif;
+    color: gray;
+    font-size: 12px;
+}
+section>article>h1{
+    color: white;
+    font-size: 2em;
+}
+.price{
+    color: aqua;
+    font-size: 40px;
+}
+section>article>ul{
+    padding: 0;
+}
+section>article>ul>li{
+    padding: 5px 0 0;
+    display: block;
+}
+section>article>button{
+    background-color: aqua;
+    border: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px ;
+    margin: 15px 0 7px ;
+}
+section>article>button:hover{
+    background-color: grey;
+    cursor: pointer;
+}
