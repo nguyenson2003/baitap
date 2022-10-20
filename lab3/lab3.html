@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', Arial, sans-serif;
+            /* top:0;left: 0;right: 0; */
+        }
+
+        nav {
+            text-transform: capitalize;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        nav ul {
+            padding-left: 0;
+            margin: 10px 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: #6c645e;
+            text-transform: capitalize;
+            margin-left: 10px;
+        }
+
+        section {
+            display: flex;
+        }
+
+        #side {
+            min-width: 200px;
+            margin: 0 20px;
+        }
+
+        #side ul {
+            border: 1px solid #d4d4d4;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        #side ul p {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #d4d4d4;
+            margin: 0;
+        }
+
+        #side ul li {
+            display: block;
+            padding-left: 10px;
+        }
+
+        #main {
+            margin: 0 10px;
+        }
+
+        #main .form {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main .form .headform {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #d4d4d4;
+        }
+
+        #main .form .bodyform {
+            display: flex;
+            background-color: gainsboro;
+            height: 200px;
+            border: 1px solid #d4d4d4;
+        }
+
+        #main .form .bodyform .label {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        #main .form .bodyform .label p {
+            margin: 0px;
+        }
+        #main .form .bodyform .input {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        #main table{
+            width: fit-content;
+            table-layout: auto;
+            margin-top: 20px;
+        }
+        #main table tr:first-of-type{
+            background-color: #eeeeee;
+        }
+        #main table tr{
+            background-color: #f9f9f9;
+        }
+        #main table td{
+            padding-right: 30px;
+        }
+        footer{
+            margin: 50px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">products</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>web developers, inc.</h1>
+    </header>
+    <section>
+        <article id="side">
+            <ul>
+                <p><button>-</button>Quicklink 1</p>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
+            </ul>
+            <ul>
+                <p><button>-</button>Quicklink 2</p>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
+            </ul>
+            <ul>
+                <p><button>-</button>Quicklink 3</p>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
+            </ul>
+        </article>
+        <article id="main">
+            Welcome to our sample web page. We'll be disecting this page piece by piece to show you the best ways to ues
+            HTML, CSS and Javascript.
+            <div class="form">
+                <div class="headform">Create a Profile</div>
+                <div class="bodyform">
+                    <div class="label">
+                        <p>First Name:</p>
+                        <p>Last Name:</p>
+                        <p>Date of birth:</p>
+                        <p>Gender:</p>
+                        <p>.</p>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="fn" id="txtFirstname">
+                        <input type="text" name="fn" id="txtLastname">
+                        <input type="date" name="bod" id="txtbod">
+                        <div>
+                            <label for="rdom">Male</label>
+                            <input type="radio" name="gen" id="rdom" value="1">
+                            <label for="rdofm">Female</label>
+                            <input type="radio" name="gen" id="rdofm" value="2">
+                        </div>
+                        <input type="submit" value="Save">
+                    </div>
+                </div>
+                <table border="1" cellspacing="0">
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Date of Birth</td>
+                        <td>Gender</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr><tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr><tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr><tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr><tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr><tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr><tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2/15/1975</td>
+                        <td>Male</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2009</p>
+    </footer>
+</body>
+
+</html>
